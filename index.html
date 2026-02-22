@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S. B Nusrath Fathima | Software Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <h2>Nusrath</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Hi, I'm <span>S. B Nusrath Fathima</span></h1>
+    <div class="typing" id="typing"></div>
+
+    <a href="nusrath resume ss.pdf" target="_blank" class="btn">
+        Download Resume
+    </a>
+</header>
+
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I am a Computer Science student passionate about software development 
+        and building scalable web applications. I have hands-on experience in 
+        developing full-stack applications using Python and Flask with database integration.
+        I enjoy solving real-world problems through clean and efficient code.
+    </p>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skill">
+        <p>Python</p>
+        <div class="bar"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Flask</p>
+        <div class="bar"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>HTML, CSS, JavaScript,Python</p>
+        <div class="bar"><div style="width:80%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>MySQL / DBMS</p>
+        <div class="bar"><div style="width:75%"></div></div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <h3>Employee Management System</h3>
+            <p>
+                Developed a full-stack web application using Flask and MySQL.
+                Implemented CRUD operations, authentication, and admin dashboard
+                for efficient employee record management.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>AI Smart Document Reader</h3>
+            <p>
+                Designed an NLP-based system to extract contextual meaning 
+                from documents and integrated text-to-speech functionality.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>NLP Word Embeddings – Sports Domain</h3>
+            <p>
+                Built custom corpus, implemented cosine similarity,
+                and applied PCA visualization using Scikit-learn.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: sbnusrathfathima@gmail.com</p>
+    <p>GitHub:<a href="https://github.com/S-B-Nusrath-Fathima" target="_blank">https://github.com/S-B-Nusrath-Fathima</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/s-b-nusrath-fathima-9095992bb?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">https://www.linkedin.com/in/s-b-nusrath-fathima</a></p>
+</section>
+
+<footer>
+    © 2026 S. B Nusrath Fathima | Software Developer
+</footer>
+
+<script>
+const text = ["Software Developer", "Python & Flask Enthusiast", "Problem Solver"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+    if(count === text.length){
+        count = 0;
+    }
+    currentText = text[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typing").textContent = letter;
+
+    if(letter.length === currentText.length){
+        count++;
+        index = 0;
+    }
+
+    setTimeout(type, 100);
+})();
+</script>
+
+</body>
+</html>
